@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TrendNxt</display-name>
+ 	<servlet>
+ 	<servlet-name>DatabaseConnection</servlet-name>
+ 	<servlet-class>TP3Assign2</servlet-class>
+ 	<init-param>
+ 	<param-name>driverName</param-name>
+ 	<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+ 	</init-param>
+ 	<init-param>
+ 	<param-name>urlName</param-name>
+ 	<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+ 	</init-param>
+ 	</servlet>
+ 	
+ 	<servlet-mapping>
+ 	<servlet-name>DatabaseConnection</servlet-name>
+ 	<url-pattern>/#</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet>
+ 	<servlet-name>DBCon</servlet-name>
+ 	<servlet-class>TP3Assign2</servlet-class>
+ 	</servlet>
+ 	<context-param>
+ 	<param-name>driverName1</param-name>
+ 	<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+ 	</context-param>
+ 	<context-param>
+ 	<param-name>urlName1</param-name>
+ 	<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+ 	</context-param>
+</web-app>
